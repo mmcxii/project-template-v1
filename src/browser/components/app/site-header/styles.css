@@ -1,0 +1,16 @@
+.site-header {
+  display: flex;
+  flex-direction: column;
+
+  & .site-title {
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  @media (min-width: 756px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}

@@ -1,0 +1,17 @@
+.site-header--navigation {
+  flex: 1 1 0;
+
+  & .nav-list {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+  }
+
+  & .nav-link {
+    text-decoration: none;
+
+    &.active {
+      text-decoration: underline;
+    }
+  }
+}
