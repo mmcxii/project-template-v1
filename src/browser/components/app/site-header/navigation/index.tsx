@@ -9,15 +9,18 @@ export const Navigation: React.FC = () => {
   const [translate] = useTranslation([SITE_NAVIGATION]);
 
   //* Variables
-  const navItems: Array<UiRoutes> = [UiRoutes.Home];
+  const navItems: Array<[route: UiRoutes, label: string]> = [[UiRoutes.Home, "home"]];
 
   return (
-    <nav className="site-header--navigation">
-      <ul className="nav-list">
-        {navItems.map((n) => (
-          <li className="nav-item" key={n}>
-            <NavLink className="nav-link" to={n}>
-              {translate(n)}
+    <nav className="flex-[1_1_0px]">
+      <ul className="flex list-none justify-evenly">
+        {navItems.map(([route, label]) => (
+          <li key={route}>
+            <NavLink
+              className={({ isActive }) => (isActive ? "underline" : "no-underline")}
+              to={route}
+            >
+              {translate(label)}
             </NavLink>
           </li>
         ))}

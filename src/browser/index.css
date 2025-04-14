@@ -1,20 +1,8 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+@import "tailwindcss";
 
-.site {
-  height: 100vh;
-}
+@theme {
+  --spacing: 4px;
 
-.site--app {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.site--app,
-.site--page {
-  height: 100%;
+  --color-orange: orange;
+  --color-white: white;
 }

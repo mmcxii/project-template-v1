@@ -15,7 +15,7 @@ export const App: React.FC<AppProps> = (props) => {
   }
 
   return (
-    <div className="site--app">
+    <div className="flex h-full flex-col">
       <SiteHeader />
 
       <Router />

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Route, Routes } from "react-router-dom";
 import { UiRoutes } from "../../../shared/routes";
-import { PageHome } from "../../pages";
+import { PageHome } from "../../pages/page-home";
 
 export const Router: React.FC = () => {
   return (
@@ -10,8 +10,4 @@ export const Router: React.FC = () => {
       <Route element={<PageHome />} path={UiRoutes.Home} />
     </Routes>
   );
-};
-
-type RedirectProps = {
-  path: string;
 };
