@@ -40,12 +40,12 @@ export function getProxyServerPort(): number {
   return parsed;
 }
 
-export function getWebpackDevServerPort(): number {
-  const envValue = getEnvValue("WEBPACK_DEV_SERVER_PORT");
+export function getLocalhostAssetsServerPort(): number {
+  const envValue = getEnvValue("LOCALHOST_ASSETS_SERVER_PORT");
   const parsed = Number.parseInt(envValue);
 
   if (Number.isNaN(parsed)) {
-    throw new Error(`Nonnumeric value for WEBPACK_DEV_SERVER_PORT: ${envValue}`);
+    throw new Error(`Nonnumeric value for LOCALHOST_ASSETS_SERVER_PORT: ${envValue}`);
   }
 
   return parsed;

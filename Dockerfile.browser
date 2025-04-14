@@ -24,7 +24,7 @@ WORKDIR /app
 FROM base as builder
 
 # Copy configuration files
-COPY ./package*.json jest.config.json jest*.ts webpack*.js tsconfig*.json ./
+COPY ./package*.json jest.config.json jest*.ts vite.config.ts tsconfig*.json ./
 
 # Install production dependencies
 RUN npm install --production --ignore-scripts

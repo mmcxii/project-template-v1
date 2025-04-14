@@ -1,8 +1,8 @@
 import express from "express";
-import { normalizeError } from "../shared/normalize-error";
-import { serveStaticAssets, serveTranslations } from "./assets";
-import { loggerMiddleware } from "./middleware/logger";
-import { getProxyServerPort } from "./utils/env";
+import { normalizeError } from "../shared/normalize-error.js";
+import { serveStaticAssets, serveTranslations } from "./assets/index.js";
+import { loggerMiddleware } from "./middleware/logger.js";
+import { getProxyServerPort } from "./utils/env.js";
 
 (async () => {
   try {

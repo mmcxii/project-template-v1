@@ -10,9 +10,11 @@ const Root: React.FC = () => {
   const areTranslationsPending = useI18n();
 
   return (
-    <BrowserRouter>
-      <App areTranslationsPending={areTranslationsPending} />
-    </BrowserRouter>
+    <React.StrictMode>
+      <BrowserRouter>
+        <App areTranslationsPending={areTranslationsPending} />
+      </BrowserRouter>
+    </React.StrictMode>
   );
 };
 

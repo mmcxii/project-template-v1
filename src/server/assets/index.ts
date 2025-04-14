@@ -1,2 +1,2 @@
-export * from "./serve-static-assets";
-export * from "./serve-translations";
+export * from "./serve-static-assets.js";
+export * from "./serve-translations.js";

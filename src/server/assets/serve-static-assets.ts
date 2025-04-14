@@ -1,12 +1,12 @@
-import { getHostingEnv } from "../utils/env";
-import { proxyToWebpackDevServerMiddleware } from "./proxy-to-webpack-dev-server";
-import { serveProductionAssets } from "./serve-production-assets";
+import { getHostingEnv } from "../utils/env.js";
+import { proxyToLocalhostAssets } from "./proxy-to-localhost-assets.js";
+import { serveProductionAssets } from "./serve-production-assets.js";
 
 export function serveStaticAssets() {
   const hostingEnv = getHostingEnv();
 
   if (hostingEnv === "localhost") {
-    return proxyToWebpackDevServerMiddleware();
+    return proxyToLocalhostAssets();
   } else {
     return serveProductionAssets();
   }
